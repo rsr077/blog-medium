@@ -1,8 +1,10 @@
 name = "backend"
 main = "src/index.ts"
-compatibility_date = "2025-06-10"
+compatibility_date = "2025-06-11"
 
 [vars]
-DATABASE_URL = "prisma://accelerate.prisma-data.net/?api_key=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhcGlfa2V5IjoiMDFKWEJYTkhWOEMwNlJUQ1dBVkQ4OThIUjYiLCJ0ZW5hbnRfaWQiOiJhYzkzNDljMjY4ZTliYWM1MDNjMjgzMTlmZDM5ZTE5MWQzODdkMzFkNGM0NzQwNjA0MDc3MTU3MWM0MjZiMmJlIiwiaW50ZXJuYWxfc2VjcmV0IjoiYzdiODg1MTQtYzQwZS00MjMxLTg1OTAtMWI5ZDlkNzA0NjBkIn0.P91q_xJhcjOgz3D_gCKPhuQtc9piCCtG_efSuiIjSbA"
+ DATABASE_URL="prisma://accelerate.prisma-data.net/?api_key=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhcGlfa2V5IjoiMDFKWEVGNzNXUjlZS1czQUs5QjlLRVg2NzkiLCJ0ZW5hbnRfaWQiOiIyZjJhYzUxOTY2YmRlOGE5NDhlMGY2NzFjNjNkOTcyYjJhODBiMjRjNjJjNGZkMTY5YTBlZmQ0NzllOGFlOWZkIiwiaW50ZXJuYWxfc2VjcmV0IjoiN2UyNTFhNWMtYmYwOS00MmMzLWFiYTYtN2Y1MWNmNDNlNTY1In0.3TadNtxyBxFlooOdknAuxdcrE4Qa_ZwbHxKH1s-y_yk"
 
-JWT_SECRET = "asdfdfdf"
+
+
+JWT_SECRET ="sdfdfdf"
