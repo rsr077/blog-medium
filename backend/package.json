@@ -8,9 +8,9 @@
   "dependencies": {
     "@prisma/client": "^6.9.0",
     "@prisma/extension-accelerate": "^2.0.1",
+    "@rsr0775656454/medium-commons": "^1.0.3",
     "hono": "^4.7.11",
     "prisma": "^6.9.0"
- 
   },
   "devDependencies": {
     "wrangler": "^4.4.0"
