@@ -14,14 +14,19 @@ const navigate = useNavigate();
      name: "",
      email: "",
      password: ""
+
    });
+
 
    async function sendRequest() {
 
     try {
    const response = await axios.post(`${BACKEND_URL}/api/v1/user/${type === "signup" ? "signup" : "signin"}`, postInputs);
 
-     const jwt = response.data;
+   console.log("Signup response:", response.data);
+
+
+     const jwt = response.data.jwt;
      localStorage.setItem("token", jwt);
      navigate("/blogs");
 
@@ -60,7 +65,9 @@ const navigate = useNavigate();
           setPostInput ({
             ...postInputs,
             name: e.target.value 
+            
           })
+   
         }}/> : null}
 
           <LabelledInput label="Username" placeholder="rajeev4342@gmail.com" onChange={(e) => {

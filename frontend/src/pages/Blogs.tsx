@@ -1,38 +1,33 @@
 import { Appbar } from "../components/Appbar"
 import { BlogCard } from "../components/BlogCard"
+import  {useBlogs}  from "../hooks"
+
 
 export const Blogs = () => {
+ const {loading, blogs} = useBlogs();
+
+ if(loading) {
+    return <div>
+      loading....
+    </div>
+ }
 
   return ( <div>
     <Appbar/> 
   
   <div className="flex justify-center">
     <div className="  max-w-xl">
-      <BlogCard 
+      {blogs.map(post => <BlogCard 
 
-        authorName ={"Rsr"}
-        title = {"How an ugly single page website makes $5000 a month without affiliate marketting"}
-       content = {"How an ugly single page website makes $5000 a month without affiliate markettingHow an ugly single page website makes $5000 a month without affiliate marketting"}
+      
+       authorName ={post.author.name || "Anonymous"}
+        title = {post.title}
+       content = {post.content}
       publishedDate = {"2nd Feb 2024"}
-      />
+      />)}
 
 
-      <BlogCard 
-
-        authorName ={"Rsr"}
-        title = {"How an ugly single page website makes $5000 a month without affiliate marketting"}
-       content = {"How an ugly single page website makes $5000 a month without affiliate markettingHow an ugly single page website makes $5000 a month without affiliate marketting"}
-      publishedDate = {"2nd Feb 2024"}
-      />
-
-
-      <BlogCard 
-
-        authorName ={"Rsr"}
-        title = {"How an ugly single page website makes $5000 a month without affiliate marketting"}
-       content = {"How an ugly single page website makes $5000 a month without affiliate markettingHow an ugly single page website makes $5000 a month without affiliate marketting"}
-      publishedDate = {"2nd Feb 2024"}
-      />
+      
     </div>
      </div>
      </div>

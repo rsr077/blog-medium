@@ -18,7 +18,7 @@
 
 
 <div className="flex">
-   <Avatar name={authorName} /> 
+   <Avatar name={authorName} size={"big"} /> 
 <div className = "font-extralight pl-2"> {authorName}
   </div>
 
