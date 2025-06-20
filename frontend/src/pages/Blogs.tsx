@@ -20,11 +20,10 @@ export const Blogs = () => {
       {blogs.map(post => <BlogCard 
 
       
-       authorName ={post.author.name || "Anonymous"}
-        title = {post.title}
-       content = {post.content}
-      publishedDate = {"2nd Feb 2024"}
-      />)}
+        authorName={post.author.name || "Anonymous"}
+        title={post.title}
+        content={post.content}
+        publishedDate={"2nd Feb 2024"} id={post.id}      />)}
 
 
       

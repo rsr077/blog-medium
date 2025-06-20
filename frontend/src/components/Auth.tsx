@@ -26,7 +26,7 @@ const navigate = useNavigate();
    console.log("Signup response:", response.data);
 
 
-     const jwt = response.data.jwt;
+     const jwt = response.data.token  || response.data.jwt;
      localStorage.setItem("token", jwt);
      navigate("/blogs");
 

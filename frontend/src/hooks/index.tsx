@@ -1,8 +1,8 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
+import { BACKEND_URL } from "../config";
 
-
-interface Post {
+export interface Post {
    "content" : string;
    "title" : string;
    "id" : number
@@ -10,6 +10,46 @@ interface Post {
      "name": string
    }
 }
+
+
+ export  const useBlog = ({id} : {id :string }) => {
+
+    
+const [loading, setLoading] = useState(true);
+const [blog, setBlog] = useState<Post>();
+
+useEffect(() => {
+  if (!id) return;
+
+  axios.get(`${BACKEND_URL}/api/v1/blog/${id}`, {
+    headers: {
+      Authorization: localStorage.getItem("token")
+    }
+  })
+  .then(response => {
+    setBlog(response.data.blog); // ✅ match backend key
+  })
+  .catch(error => {
+    console.error("Error fetching blog:", error);
+  })
+  .finally(() => {
+    setLoading(false);
+  });
+}, [id]);
+
+return {
+  loading,
+  blog
+
+  
+};
+
+       
+ }
+ 
+
+
+
 
 export const useBlogs = () => {
   const [loading, setLoading] = useState(true);
@@ -19,7 +59,7 @@ export const useBlogs = () => {
 
  
   useEffect(() => {
-    axios.get(` http://localhost:8787/api/v1/blog/bulk`, {
+    axios.get(`${BACKEND_URL}/api/v1/blog/bulk`, {
       headers: {
         Authorization: localStorage.getItem("token")
       }
