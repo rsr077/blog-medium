@@ -1,6 +1,6 @@
 import  { type Post } from "../hooks"
 
-
+   
 import { Appbar } from "./Appbar"
 import { Avatar } from "./BlogCard"
 
@@ -21,11 +21,15 @@ export const FullBlog = ({post}: {post:Post}) => {
         </div>
       </div>
         <div className=" col-span-4">
-             Author
+
+          <div className="text-slate-600 text-lg">
+               Author
+          </div>
+         
 
               <div className="flex w-full">
-               <div className="pr-2 flex felx-col justify-center">
-                   <Avatar name={post.author.name || "Anonymous"} size={"big"}/>
+               <div className="pr-4 flex flex-col justify-center">
+                   <Avatar name={post.author.name || "Anonymous"} size={"small"}/>
                </div>
               <div>
 
