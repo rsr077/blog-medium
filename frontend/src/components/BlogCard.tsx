@@ -16,7 +16,7 @@ import { Link } from "react-router-dom";
  }: BlogCardProps) => {
 
   return  <Link to={`/blog/${id}`}> 
-  <div  className="p-4 border border-slate-200 pb-2   max-w-screen-md cursor-pointer">
+  <div  className="p-4 border border-slate-200 pb-2  max-w-screen-md cursor-pointer">
 
 
 
@@ -53,10 +53,11 @@ import { Link } from "react-router-dom";
  }
 
 
- function Circle () {
-     return 
+export function Circle () {
+     return (
      <div className="h-1 w-1 rounded-full  bg-slate-400">
       </div>
+     );
  }
 
   export function Avatar({name ,size = "small"}: {name: string, size: "small" | "big"}) {
